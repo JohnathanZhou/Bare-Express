@@ -12,15 +12,16 @@ app.get('/', function(req, res) {
 
 // This route should never be called.
 // Visiting / should execute the previous route.
-app.get('/', function(req, res) {
-  res.send('Ignored :(');
+app.get('/hello', function(req, res) {
+  res.send('Ignored :( but hello!');
 });
+
 
 // This route should send all of the query parameters
 // back as a JSON string.
 // Response type should be application/json
 app.get('/query', function(req, res) {
-  res.json(req.query);
+  res.json(req.query)
 });
 
 // TEST req.query:

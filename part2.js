@@ -12,6 +12,7 @@ var app = hexpress();
 // where req.body.username will be the username posted to the endpoint
 // and req.body.password will be the password posted to the endpoint
 app.post('/login', function(req, res) {
+  console.log(req.body.username);
   res.json({
     method: 'post',
     username: req.body.username,
